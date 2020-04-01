@@ -18,10 +18,8 @@ Tener presente estos comandos para instalar y crear un entorno con Python3
 -- Ctrl + Shif + X install
 
 - Live Server: permite crear un servidor local y abrir el archivo con:
-
--- **Alt + L + O**
--- Para detenerlo click en la parte inferior en el Port:5500
-
+     -- **Alt + L + O**
+     -- Para detenerlo click en la parte inferior en el Port:5500
 - Bracket Pair Colorizer: Colores en los paréntesis o llaves
 - Material Night theme: Visualiza el formato en un icono en el archivo
 - Emmet: Escribir varias sentencias de manera rápida  incluida en visual studio ejemplo:
