@@ -3,7 +3,7 @@
 - Es la especificación para crear un lenguaje de scripting.
 - Los navegadores los utilizan para interpretar el còdigo JavaScript.
 - ECMAScript dicta las reglas, detalles y lineamientos que un lenguaje de scripting debe seguir para ser considerado por ECMAScript.
-- **JavaScript** Un lenguaje de Scripting que sigue las especificaciones de ECMAScript
+- **JavaScript** Un lenguaje dinámico de Scripting que sigue las especificaciones de ECMAScript
 
 ## Versiones de ECMAScript
 

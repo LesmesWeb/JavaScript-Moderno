@@ -39,7 +39,9 @@ var PrimerNombre = 'Pascal case'
 // 3 maneras de crear variables (var, let , const)
 /*
 //var
-esta variable no tiene contraindicaciones pero no es del todo recomenda por su peso en memoria.
+si se declara var esta solo queda de forma local al metodo que se va a utilizar.
+mientra si no se usa var aplica para todo el documento *.js
+fuente:https://es.stackoverflow.com/questions/60382/en-que-momento-usar-var-en-javascript-y-por-que-es-necesario
 */
 
 /*
@@ -82,16 +84,111 @@ document.getElementById('concatenar_moderno').innerHTML = `i'am  ${nombre}, i'am
 
 // ---------- Fin Ejercicio 3 ---------
 
-// ---------- inicio Ejercicio 4 (metodos en las variables) ---------
+// ---------- inicio Ejercicio 4 (metodos en las variables de cadena de texto) ---
 
-nombre = "Camilo L"
+/*
+let nombre = "Camilo L"
 
 console.log(nombre.length)                        //Cantidad de carácteres
 console.log(nombre.concat(' ','de Bogotá'))       //Concatenar
 console.log(nombre.toLowerCase())                 //String a minúsculas
 console.log(nombre.toUpperCase())                 //String a mayúsculas
 console.log(nombre.indexOf("L"))                  //Me indica en que numero se encuentra ese caracter (7), sino lo encuentra genera (-1)
-
-
-
+console.log(nombre.toUpperCase())                 //String a mayúsculas
+console.log(nombre.substring(0,6))                //toma el texto y lo corta usando el indice
+console.log(nombre.slice(-8,4))                   // toma un “trozo” de un array, indicado por un índice de inicio y un índice final 
+console.log(nombre.split(' '))                    //divide por el espacio la cadena
+console.log(nombre.replace('L','Lesmes'))         //reemplaza la cadena
+console.log(nombre.includes('Camilo'))            //retorna un boleano si el contenido se encuentra True
+console.log(nombre.repeat(3))                 //repite la cadena el numero de veces que se le indique
+*/
 // ---------- Fin Ejercicio 4 ---------
+
+
+// ---------- inicio Ejercicio 5 (Operadores Aritméticos) ---
+/*
+//Se crean constantes porque no quiero que el valor de la variable cambie
+const numero1 = 30;
+      numero2 = 20;
+      numero3 = 20.20;
+      numero4 = .1020;
+      numero5 = -3;
+
+//let porque el valor va cambiar
+let resultado;
+
+//suma
+resultado = numero1 + numero2;
+//resta
+resultado = numero1 - numero2;
+//Multiplicación
+resultado = numero1 * numero2;
+//División
+resultado = numero1 / numero2;
+//Modulo (Residuo)
+resultado = numero1 % numero2;
+//Pi
+resultado = Math.PI; //3.14
+//Redondeo estandar
+resultado = Math.round(2.4);
+//Redondeo positivo
+resultado = Math.ceil(2.4); //3
+//redondeo negativo
+resultado = Math.floor(2.4); //2
+//Raiz cuadrada
+resultado = Math.sqrt(144); //12
+//Numero absoluto
+resultado = Math.abs(numero5); //3
+//Potencia
+resultado = Math.pow(8,2); //64
+//Minimo
+resultado = Math.min(3,6,5,1,9,7,8); //1
+//Maximo
+resultado = Math.max(3,6,5,1,9,7,8); //9
+//Numero Aleatorio
+resultado = Math.random(); //0.548866781700361
+//Jerarquía de las operaciones incluida
+resultado = 10 + 20 *5 //110
+resultado = (10 + 20) * 5 //150 
+//20% de descuente de 3 productos
+resultado = (10 + 20 + 70) * .20 //20
+
+console.warn("resultado es: ",resultado)
+
+//incremento positivo
+let incremento = 5
+++incremento                               //6
+incremento += 2                              
+console.warn("Incremento es: ",incremento) //8
+
+//decremento
+--incremento
+--incremento //6
+incremento -=3
+console.error("Incremento es: ",incremento) //3
+
+*/
+// ---------- Fin Ejercicio 5 ---------
+
+// ---------- inicio Ejercicio 6 (Tipos de datos) ---
+/*
+//Tipo Primitivos
+let valor;                                             //undefined;
+valor = undefined                                      //undefined;
+valor = 'juan';                                        //string
+valor = true;                                          //boolean
+valor = Symbol('Simbolo')                              //symbol
+valor = null;                                          //object null
+
+valor = 20;                                            //number
+valor = 20.20;                                         //number
+valor = -30;                                           //number
+
+//Referencia o de tipo objeto
+valor = [1,2,3,4]                                      //object array
+valor = {valor:'juan', profesion:'desarrollador'}      //object object
+valor = new Date()                                     //object 
+
+console.log(typeof valor)
+*/
+// ---------- Fin Ejercicio 6 ---------
