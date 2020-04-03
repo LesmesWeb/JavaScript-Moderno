@@ -192,3 +192,72 @@ valor = new Date()                                     //object
 console.log(typeof valor)
 */
 // ---------- Fin Ejercicio 6 ---------
+
+
+// ---------- inicio Ejercicio 7 (operadores de comparación) ---
+/*
+const numero1 = 20;
+const numero2 = 50;
+const numero3 = '20';
+
+console.log(numero1>numero2);                         //false
+console.log(numero1<numero2);                         //true
+
+//Comparador igual
+//comparador no tan estricto omite el tipo (==)
+console.log(20 == numero3);                           //true
+console.log("no estricto: ", null == undefined)        //true
+//comparador estricto por tipo y elemento (===)
+console.log(20 === numero3);                          //true
+console.log("Estricto: ", null === undefined)        //true
+
+console.log('hola' == ' hola');                       //false
+
+//Diferente
+console.log("Diferente: ",2 != 3)                     //true
+
+//A-Z menor peso que a-z (JS moderno)
+console.error("minuscas son mayores que las mayusculas: ",'z'>'A') //True
+*/
+// ---------- Fin Ejercicio 7 ---------
+
+// ---------- inicio Ejercicio 8 (Convertir String a numero) ---
+
+const numero1 = "50",
+      numero2 = 10,
+      numero3 = 'tres';
+
+console.log(typeof numero1) //string
+
+//No los suma, lo concatena
+console.log("resultado es: ",numero1 + numero2)                   //5010
+
+//Convertir string a Numero
+console.log("resultado Number: ", Number(numero1) + numero2)      //60
+console.log("resultado parseInt: ", parseInt(numero1) + numero2)  //60
+console.log("resultado NaN: ", Number(numero3));                  //Nan (No es un numero)
+
+//Number (Js Moderno)
+let dato;
+dato = Number("20");                //20
+dato = Number('20.10931')           //20.10931
+dato = Number(true)                 //1                 
+dato = Number(false)                //0
+dato = Number(null)                 //0
+dato = Number(undefined)            //Nan (No es un numero)
+dato = Number('hola mundo')         //Nan (No es un numero)
+dato = Number([1,2,3,4])            //Nan (No es un numero)
+console.log("Convert Number: ",dato)
+
+//ParseFloat y ParseInt
+datos = parseInt('100');            //100
+datos = parseInt('100');            //100
+datos = parseFloat('100');          //100
+datos = parseFloat('100.2030');     //100.2030
+console.log("Convert parse: ",datos)
+
+// toFixed
+datofixed = '18.12356463'
+console.log("Fixed parse: ", parseFloat(datofixed).toFixed(2)) //18.12
+
+// ---------- Fin Ejercicio 8 ---------
