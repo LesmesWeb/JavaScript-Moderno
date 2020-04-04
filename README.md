@@ -26,6 +26,7 @@ Tener presente estos comandos para instalar y crear un entorno con Python3
 
 -- ``h1#titulo.info  <h1  id="titulo"  class="info"></h1>``
 
+-- Shift + alt + A Comenta html
 -- Ctrl + Shift + p --> Preferences --> >Open Settings (JSON)
 
 ```sh

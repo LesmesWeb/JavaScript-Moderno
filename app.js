@@ -89,7 +89,7 @@ document.getElementById('concatenar_moderno').innerHTML = `i'am  ${nombre}, i'am
 /*
 let nombre = "Camilo L"
 
-console.log(nombre.length)                        //Cantidad de carácteres
+console.log(nombre.length)                        //Cantidad de carácteres solo aplica en texto
 console.log(nombre.concat(' ','de Bogotá'))       //Concatenar
 console.log(nombre.toLowerCase())                 //String a minúsculas
 console.log(nombre.toUpperCase())                 //String a mayúsculas
@@ -222,7 +222,7 @@ console.error("minuscas son mayores que las mayusculas: ",'z'>'A') //True
 // ---------- Fin Ejercicio 7 ---------
 
 // ---------- inicio Ejercicio 8 (Convertir String a numero) ---
-
+/*
 const numero1 = "50",
       numero2 = 10,
       numero3 = 'tres';
@@ -259,5 +259,99 @@ console.log("Convert parse: ",datos)
 // toFixed
 datofixed = '18.12356463'
 console.log("Fixed parse: ", parseFloat(datofixed).toFixed(2)) //18.12
-
+*/
 // ---------- Fin Ejercicio 8 ---------
+
+// ---------- inicio Ejercicio 9 (Convertir numero a String) ---
+/*
+let cp;
+
+cp = 90210;
+console.warn(cp.length); //undefined solo aplica para cadena de texto
+
+cp = String(cp);
+console.warn(cp.length); //5
+console.log(typeof cp);  //string
+
+let dato;
+dato = '4' + '4';
+console.log(dato.length); //2
+
+//Boleanos
+boolean_true = true;
+boolean_false = false;
+boolean_true = String(boolean_true);
+console.log("Boolean Str: ",boolean_true.length); //4
+console.log("Boolean false: ",boolean_false.length); //undefined
+
+//arreglo
+arreglo = [1,2,3];
+console.log("arreglo: ",arreglo.length); //3
+
+//tostring();
+dato = 20;   //20
+dato = true; //true
+dato = null; //error
+dato = dato.toString();
+
+console.error(dato);
+console.error(dato.length);
+*/
+
+// ---------- Fin Ejercicio 9 ---------
+
+
+// ---------- inicio Ejercicio 10 (template literals o string template) ---
+
+//no van a variar
+const producto1 = 'Pizza',
+      precio1 = 30,
+      producto2 = 'Hamburguesa',
+      precio2 = 40;
+
+//Forma vieja de crear un html (String template)
+
+//la variable va cambiar
+/*
+let html;
+html = '<ul>'+
+       '<li>Orden: ' + producto1 + '</li>' +
+       '<li>Precio: ' + precio1 + '</li>'  +
+       '<li>Orden: ' + producto2 + '</li>' +
+       '<li>Precio: ' + precio2 + '</li>'  +
+       '<hr>'+
+       '<li>Total: '+ (precio1+precio2) + '</li>' +
+      '</ul>';
+
+       console.log(html)
+       
+//pintamos en el DOM
+document.getElementById('ejercicio_10_template_forma_vieja').innerHTML = html;
+*/
+
+//en la forma moderna puede contener funciones en sus templates (JS MODERNO)
+let hml_literals;
+
+hml_literals = `
+            <ul>
+                  <li>Orden: ${producto1} </li>
+                  <li>Precio: ${precio1} </li>
+                  <li>Orden: ${producto2} </li>
+                  <li>Precio: ${precio2} </li>
+                  <hr>
+                  <li>Total: ${total(precio1,precio2)}  </li>
+            </ul>
+            `;
+
+function total(precio1,precio2){
+      return precio1 + precio2;
+}
+
+document.getElementById('ejercicio_10_template_forma_moderna_literals').innerHTML = hml_literals;
+
+                              
+
+//Template Literals (JS moderno)
+
+
+// ---------- Fin Ejercicio 10 ---------
