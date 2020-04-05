@@ -329,6 +329,8 @@ html = '<ul>'+
 document.getElementById('ejercicio_10_template_forma_vieja').innerHTML = html;
 */
 
+/*
+//Template Literals (JS moderno)
 //en la forma moderna puede contener funciones en sus templates (JS MODERNO)
 let hml_literals;
 
@@ -348,10 +350,84 @@ function total(precio1,precio2){
 }
 
 document.getElementById('ejercicio_10_template_forma_moderna_literals').innerHTML = hml_literals;
-
-                              
-
-//Template Literals (JS moderno)
-
+*/
 
 // ---------- Fin Ejercicio 10 ---------
+
+
+// ---------- inicio Ejercicio 11 (Arreglos y sus metodos) ---
+
+//Areglo de numero (indice 0 - 5)
+const numeros = [10,20,30,40,50]
+console.warn(numeros);
+
+//Areglo de Strings(método alternativo)
+const meses = new Array('Enero','Febrero','Marzo','Abril');
+console.log(meses);
+
+//Areglo mezclado
+const mezclado = ['hola', 20, true, null, false, undefined];
+console.log(mezclado);
+
+//para acceder al arreglo es por indices
+console.log(mezclado[0]); //hola
+console.log(mezclado[5]); //undefined
+
+//    Metodos**
+
+//comprobar si es un arreglo
+console.log('¿Es un array?', Array.isArray(mezclado));
+
+//incluir un elemento al arreglo
+const añadir = new Array('Enero','Marzo','Abril');
+
+//añade en indice solicitado pero reemplaza si existe (Marzo)
+añadir[1] = 'Febrero';
+
+//añade al final del arreglo
+añadir.push('Mayo');
+
+//añade al incio del arreglo
+añadir.unshift('Mes 0');
+
+//encontrar un elemento en el arreglo
+console.log(añadir.indexOf('Mayo')); //4 (indice de la ubicación)
+
+//Eliminar un elemento de un arreglo (el ultimo)
+añadir.pop();
+
+//Eliminar un elemento del arreglo (el primero)
+añadir.shift();
+
+console.log(añadir); //["Enero", "Febrero", "Abril"]
+
+//Quitar de un rango
+añadir.splice(2,1); //["Enero", "Febrero"]
+añadir.splice(0,2); //["Abril"]
+
+añadir.reverse(); //revierte el orden
+
+//unir un arreglo con otro
+let arreglo1 = [1,2,3],
+      arreglo2 = [9.8,7];
+
+console.log(arreglo1.concat(arreglo2)) //[1, 2, 3, 9.8, 7]
+
+//ordenar un arreglo de texto (JS Moderno)
+const frutas = ['Platano','Manzana','Fresa','Naranja','Zanahiria'];
+frutas.sort();
+console.log(frutas);
+
+//ordenar un arreglo de numeros queda mal
+arreglo1 = [4,10,3,2,105,1,7,8];
+arreglo1.sort();
+console.log("No correcto: ",arreglo1); // [1, 10, 105, 2, 3, 4, 7, 8]
+
+//funcion para ordenar con numero bien
+arreglo1.sort(function(x,y){
+      return x - y //menor a mayor
+      //return y - x //mayor a menor 
+})
+console.log("Arreglado: ", arreglo1);
+
+// ---------- Fin Ejercicio 11 ---------
