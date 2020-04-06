@@ -356,6 +356,13 @@ document.getElementById('ejercicio_10_template_forma_moderna_literals').innerHTM
 
 
 // ---------- inicio Ejercicio 11 (Arreglos y sus metodos) ---
+/*
+//Con Const no se pueden reasignar variables pero en el arreglo se pueden añadir elementos
+const_arrego = [1,2,3];
+const_arrego[3]=4;
+const_arrego.push(5)
+console.log(const_arrego)
+
 
 //Areglo de numero (indice 0 - 5)
 const numeros = [10,20,30,40,50]
@@ -429,5 +436,137 @@ arreglo1.sort(function(x,y){
       //return y - x //mayor a menor 
 })
 console.log("Arreglado: ", arreglo1);
-
+*/
 // ---------- Fin Ejercicio 11 ---------
+
+
+// ---------- inicio Ejercicio 12 (Objetos) ---
+/*
+const persona = {
+      nombre:'Camilo',
+      apellido:'Lesmes',
+      profesion:'Desarrollador',
+      email:'correo@correo.com',
+      edad:20,
+      musica:['Rock','Salsa'],
+      ubicacion:{
+            ciudad:'Bogotá',
+            pais:'Colombia'
+      },
+      //se pueden añadir funciones
+      nacimiento: function(){
+            //this permite un llamado dentro de los objetos
+            return new Date().getFullYear() - this.edad;
+      }
+};
+
+//visualizar el datos de la función del arreglo
+console.warn(persona.nacimiento());
+
+console.log(persona); //Camilo
+
+console.log(persona.nombre); //Camilo
+console.log(persona.musica[1]); //Salsa
+console.log(persona.ubicacion.pais); //Colombia (JS Moderno)
+console.log(persona['ubicacion']['pais']); //Colombia 
+
+//Aplican los métodos del arreglo
+persona.musica.push('Alternativo');
+console.log(persona.musica);
+*/
+// ---------- Fin Ejercicio 12 ---------
+
+
+// ---------- inicio Ejercicio 13 (Arreglo de objetos) ---
+/*
+const autos = [
+      {modelo:'Mustang' , motor:6.2 },
+      {modelo:'Camaro', motor:6.3 },
+      {modelo:'Challenger', motor:6.3 },
+];
+
+console.log(autos) //array
+console.log(autos.length) //3
+console.log(autos[0].modelo) //Mustang
+
+
+//For que va recorrer 3 veces para ver cada objecto.
+
+
+//index empieza en cero, que vaya aumentando de uno en uno, ////hasta que cumpla el numero de array (3).
+
+for (let index = 0; index < autos.length; index++) {
+      console.log("Motor: ",autos[index].motor)
+      //string literal
+      console.log(`El modelo es: ${autos[index].modelo} y su motor es: ${autos[index].motor}`)
+      
+}
+*/
+// ---------- Fin Ejercicio 13 ---------
+
+
+// ---------- inicio Ejercicio 14 (Funciones) ---
+
+//Function Declarations
+/*
+function sumar(a,b) {
+      return(a+b)      
+}
+let suma = sumar(8,9)
+suma = sumar(10,19)
+console.log(`la suma es: ${suma}`)
+
+//forma clasica de validar el for
+function saludar(nombre) {
+      if(typeof nombre === 'undefined'){
+            nombre = 'Visitante'
+      }
+      return `Hola ${nombre}`     
+}
+
+//forma modenar (JS Moderno) dando un valor por defecto
+function saludar(nombre = 'Visitante'){
+      return `Hola ${nombre}`     
+}
+
+let saludo;
+saludo = saludar()
+console.log(`Resultado: ${saludo}`)
+
+
+//Function expression
+const suma = function (a=0,b=0) {
+      return a+b;      
+}
+console.log(suma(21,18)); //39
+console.log(suma(2)); //2
+*/
+// ---------- Fin Ejercicio 14 ---------
+
+// ---------- inicio Ejercicio 14 (Funciones tipos ) ---
+
+// IIFE Funciones que se declaran y se invocan inmediatamente
+(function (tecnologia) {
+      console.log(`Aprendiendo: ${tecnologia}`);
+})('IIFE');
+
+//Método de propiedad
+const musica = {
+      reproducir: function(id){
+            console.log(`Reprodución con el ID: ${id}`);
+      },
+      pausar: function(){
+            console.log(`Pause la canción`);
+      },
+}
+
+//los metodos también pueden guardarse / crearse fuera del objeto
+musica.borrar = function(id){
+      console.log(`Borrando la canción ID: ${id}`);
+}
+
+musica.reproducir(30);
+musica.pausar();
+musica.borrar(2);
+
+// ---------- Fin Ejercicio 14 ---------
