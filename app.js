@@ -544,7 +544,7 @@ console.log(suma(2)); //2
 // ---------- Fin Ejercicio 14 ---------
 
 // ---------- inicio Ejercicio 14 (Funciones tipos ) ---
-
+/*
 // IIFE Funciones que se declaran y se invocan inmediatamente
 (function (tecnologia) {
       console.log(`Aprendiendo: ${tecnologia}`);
@@ -568,5 +568,67 @@ musica.borrar = function(id){
 musica.reproducir(30);
 musica.pausar();
 musica.borrar(2);
-
+*/
 // ---------- Fin Ejercicio 14 ---------
+
+// ---------- inicio Ejercicio 15 (Try Catch - Finally ) ---
+/*
+//Funciòn que no existe
+try {
+      
+      algo();
+
+} catch (error) {
+      console.log(error); //algo is not defined
+} finally{
+      console.warn('ejecuta de todos los modos (si existe o no) ');
+      obternerClientes();
+}
+
+function obternerClientes() {
+      console.log('Descargando...');
+      //se ejecuta despúes de 3 segundos
+      setTimeout(function(){
+            console.log('completado')
+      },3000);
+      
+}
+*/
+// ---------- Fin Ejercicio 15 ---------
+
+// ---------- inicio Ejercicio 16 (Fechas ) ---
+
+//Objeto Date
+const diaHoy = new Date()
+
+let valor;
+
+//**Métodos de Date **
+
+//get permite traer información
+//Mes
+valor = diaHoy.getMonth(); //3
+//Día
+valor = diaHoy.getDay();   //2
+valor = diaHoy.getDate();  //7
+//Minutos
+valor = diaHoy.getMinutes(); //30
+//Hora
+valor = diaHoy.getHours(); //2
+//Milisegundos desde 1970
+valor = diaHoy.getTime(); //1586244677570
+//Obtener el año
+valor = diaHoy.getFullYear(); //2020
+
+//set modifica el metodo
+valor = diaHoy.setFullYear(2018);
+valor = diaHoy.getFullYear();//2018
+
+console.log(valor);
+
+
+
+
+
+
+// ---------- Fin Ejercicio 16 ---------
