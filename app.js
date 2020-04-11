@@ -597,7 +597,7 @@ function obternerClientes() {
 // ---------- Fin Ejercicio 15 ---------
 
 // ---------- inicio Ejercicio 16 (Fechas ) ---
-
+/*
 //Objeto Date
 const diaHoy = new Date()
 
@@ -625,10 +625,121 @@ valor = diaHoy.setFullYear(2018);
 valor = diaHoy.getFullYear();//2018
 
 console.log(valor);
-
-
-
-
-
-
+*/
 // ---------- Fin Ejercicio 16 ---------
+
+// ---------- inicio Ejercicio 17 (Estructuras de control JS ) ---
+
+//IF ELSE 
+const edad = 18;
+
+if(edad >= 18){
+      console.log('Si puedes entrar al sitio')
+} else{
+      console.log('No puedes entrar al sitio')
+}
+
+let puntaje; //undefined
+
+if(typeof puntaje !='undefined'){
+      console.log(`El puntaje fue de ${puntaje}`);
+}else{
+      console.log(`No hay puntaje`);
+
+}
+
+//ELSEIF 
+//Operador && (and) debe ser exacto
+
+let hora = 25;
+
+if(hora > 0 && hora <= 11){
+      console.log("Buenos días");
+}else if (hora > 11 && hora <=17){
+      console.log("Buenas tardes") ;     
+}else if (hora > 17 && hora <=24){
+      console.log("Buenas Noches");
+}else{
+      console.log("Hora fuera de rango");
+}
+
+//operador || (OR) Si se cumple una o la otra
+
+let   efectivo = 250,
+      credito = 250,
+      disponible = efectivo + credito,
+      totalCarrito = 500;
+
+if (totalCarrito < efectivo || totalCarrito < credito){
+      console.log('Puede pagar');
+}else if (totalCarrito<=disponible){
+      console.log('Page con ambos');
+}else{
+      console.log("No puede pagar");
+}
+
+//Ternario IF
+
+const logueado = true;
+console.log(logueado === true ? 'Si se logueo' : 'No se logueo') 
+
+// Switch
+//Ejemplo 1
+const metodoPago = 'bitcoins';
+
+switch(metodoPago){
+      case 'efectivo':
+            console.log(`el usuario pago con ${metodoPago}`)
+            break;
+      case 'cheque':
+            console.log(`El usuario pago con ${metodoPago}`)
+      case 'tarjeta':
+            console.log(`El usuario pago con ${metodoPago}`)
+      default:
+            console.log('Metodo de pago no soportado')
+}
+//Ejemplo 2
+let mes;
+switch(new Date().getMonth()){
+      case 0:
+            mes = 'Enero';
+            break;
+      case 1:
+            mes = 'Febrero';
+            break;
+      case 2:
+            mes = 'Marzo';
+            break;
+      case 3:
+            mes = 'Abril';
+            break;
+      case 4:
+            mes = 'Mayo';
+            break;
+      case 5:
+            mes = 'Junio';
+            break;
+      case 6:
+            mes = 'Julio';
+            break;
+      case 7:
+            mes = 'Agosto';
+            break;
+      case 8:
+            mes = 'Septiembre';
+            break;
+      case 9:
+            mes = 'Octubre';
+            break;
+      case 10:
+            mes = 'Noviembre';
+            break;
+      case 11:
+            mes = 'Diciembre';
+            break;
+}
+
+console.log(`Este mes es: ${mes}`)
+
+
+// ---------- Fin Ejercicio 17 ---------
