@@ -629,7 +629,7 @@ console.log(valor);
 // ---------- Fin Ejercicio 16 ---------
 
 // ---------- inicio Ejercicio 17 (Estructuras de control JS ) ---
-
+/*
 //IF ELSE 
 const edad = 18;
 
@@ -741,5 +741,66 @@ switch(new Date().getMonth()){
 
 console.log(`Este mes es: ${mes}`)
 
-
+*/
 // ---------- Fin Ejercicio 17 ---------
+//For Loops 1
+for (let i = 0; i < 10; i++ ){
+      if(i % 2 == 0){ //modulo 0
+            console.log(`Numero ${i} es par`);
+      }
+      else{
+            console.log(`Numero ${i} es impar`);
+      }
+
+}
+
+//For Loops 2
+for (let i = 1; i <= 4; i++ ){
+      if(i == 2){
+            console.log('voy en el 2');
+            continue;// (es igual al else)
+      }
+      console.log(`${i}`) // 1 voy en el 2 3 4
+
+}
+
+//For Loops 3
+for (let i = 1; i <= 4; i++ ){
+      if(i == 2){
+            console.log('voy en el 2');
+            break;// (termina la ejecución)
+      }
+      console.log(`${i}`) // 1 voy en el 2
+
+}
+
+// For loop comparar 1
+const arregloProductos1 = ['Camisa','Boleto','Lapiz']
+for (let i = 0; i < arregloProductos1.length ; i++ ){
+      console.warn(`For - Producto #${i} se añadio: ${arregloProductos1[i]}`) // Camisa Boleto Lapiz
+
+}
+
+// While comparar 1
+const arregloProductos2 = ['Camisa','Boleto','Lapiz']
+i = 0
+while(i<arregloProductos2.length){
+      console.error(`While - Producto #${i} se añadio: ${arregloProductos2[i]}`)
+      i++
+}
+
+// Do While (corre el codigo al menos una vez sin importar si la condición se cumplo
+i = 10
+do{
+      console.warn(`Numero: ${i}`) //10
+
+      i++;
+}while(i<4); //no se ejecuta porque no cumple la condición
+
+// ---------- inicio Ejercicio 18 ( Iteraciones - For Loop) ---
+
+
+
+
+
+// ---------- Fin Ejercicio 18 ---------
