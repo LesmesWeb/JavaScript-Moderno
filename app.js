@@ -743,6 +743,7 @@ console.log(`Este mes es: ${mes}`)
 
 */
 // ---------- Fin Ejercicio 17 ---------
+/*
 //For Loops 1
 for (let i = 0; i < 10; i++ ){
       if(i % 2 == 0){ //modulo 0
@@ -797,10 +798,181 @@ do{
       i++;
 }while(i<4); //no se ejecuta porque no cumple la condición
 
-// ---------- inicio Ejercicio 18 ( Iteraciones - For Loop) ---
-
-
-
-
+*/
 
 // ---------- Fin Ejercicio 18 ---------
+
+// ---------- inicio Ejercicio 19 ( ForEach, maps y iteradores) ---
+
+// **ForEach (arreglos)**
+const pendientes = ['Tarea','Comer','Aprender JS']
+
+pendientes.forEach(function(pendiente, index){
+      console.log(`${index} : ${pendiente}`); //0 : Tarea 1 : Comer  2 : Aprender JS
+});
+
+// **map para recorrer un arreglo de objetos**
+const carrito = [
+      {id: 1, producto:'Libro'},
+      {id: 2, producto:'Camisa'},
+      {id: 3, producto:'Guitarra'},
+]
+
+//almacena en una variable y extrae la información
+
+const nombreProducto = carrito.map(function(carrito){
+      return carrito.producto
+})
+console.warn(nombreProducto) //["Libro", "Camisa", "Guitarra"]
+
+//**Iteradores**
+
+const automovil = {
+      modelo:'Camaro',
+      motor:150,
+      marca:'Ford',
+}
+
+for (let auto in automovil){
+      console.log(`${auto} : ${automovil[auto]}`) //modelo : Camaro motor : 150
+}
+
+const ciudades = ['Londres','New York', 'Madrid']
+const ordenes = new Set([123,231,131]) 
+const datos = new Map();
+datos.set('nombre','juan');
+datos.set('profesion','desarollador web')
+
+console.log(ciudades) // (3) ["Londres", "New York", "Madrid"]
+console.log(ordenes)  // Set(3){123, 231, 131}
+console.log(datos)    // Map(2) {"nombre" => "juan", "profesion" => "desarollador web"}
+
+
+/*          Iterator
+
+** entries : devuelve una matriz cuyos elementos son matrices correspondientes a los [key, value] ej:([0, "Londres"])
+** values: devuelve los valores de las propiedades enumerables ej: (londres)
+** keys:  devuelve el indice
+** default: imprimen los valores que vienen por defecto
+*/
+
+// entries a las ciudades
+for(let ciudad of ciudades.entries()){
+      console.log("entries --> ",ciudad) 
+      /*
+      (2) [0, "Londres"]
+      0: 0
+      1: "Londres"
+      length: 2
+      */
+}
+
+//values a las ciudades
+for(let ciudad_val of ciudades.values()){
+      console.warn("ciudad_val --> ",ciudad_val) 
+      /*
+      Londres
+      New York
+      Madrid
+      */
+}
+
+//keys a las ciudades
+for(let ciudad_keys of ciudades.keys()){
+      console.error("ciudad_keys --> ",ciudad_keys) 
+      /*
+      0
+      1
+      2
+      */
+}
+
+
+// entries para las ordenes
+for(let orden of ordenes.entries()){
+      //en el set la llave no existe lo que hace que el valor se repita
+      console.log("entries --> ",orden) 
+      /*
+      [123, 123]
+      0: 123
+      1: 123
+      length: 2
+      */
+}
+
+//values a las ordenes
+for(let orden_val of ordenes.values()){
+      console.warn("orden_val --> ",orden_val) 
+      /*
+      123
+      231
+      131
+      */
+}
+
+//keys a las ordenes
+for(let orden_keys of ordenes.keys()){
+      console.error("orden_keys --> ",orden_keys) 
+      /*
+      123
+      231
+      131
+      */
+}
+
+// entries para las Map
+for(let dato of datos.entries()){
+      //en el set la llave no existe lo que hace que el valor se repita
+      console.log("entries --> ",dato) 
+      /*
+      (2) ["nombre", "juan"] 
+      0: "nombre"1: "juan" 
+      length: 2__proto__: Array(0)
+      */
+}
+
+//values a las MAP
+for(let dato_val of datos.values()){
+      console.warn("dato_val --> ",dato_val) 
+      /*
+      123
+      juan
+      desarollador web
+      */
+}
+
+//keys a las ordenes
+for(let dato_keys of datos.keys()){
+      console.error("dato_keys --> ",dato_keys) 
+      /*
+      nombre
+      profesion
+      */
+}
+
+// ---------- Fin Ejercicio 19 ---------
+
+
+// ---------- inicio Ejercicio 19 ( iterador string ejemplo con html) ---
+const texto = "texto dos"
+
+for (let i = 0 ; i < texto.length; i++){
+      console.log(texto[i]) //t e x t o   d o s
+}
+
+//JS MODERNO
+for (let letra in texto){
+      console.warn(letra) //0 1 2 3 4 5 6 7 8
+}
+
+for (let letra of texto){
+      console.log(letra) //t e x t o   d o s
+}
+
+const enlaces = document.getElementsByTagName('a')
+for (let enlace of enlaces){
+      console.log(enlace) //  <a href="http://instagram.com"></a>
+      console.log(enlace.href) //http://adobe.com/
+}
+
+// ---------- Fin Ejercicio 19 ---------

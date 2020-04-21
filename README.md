@@ -25,7 +25,7 @@ Tener presente estos comandos para instalar y crear un entorno con Python3
 - Emmet: Escribir varias sentencias de manera rápida  incluida en visual studio ejemplo:
 
 -- ``h1#titulo.info  <h1  id="titulo"  class="info"></h1>``
-
+-- a*5 (crea cinco etiquetas ``<a href=""></a>``)
 -- Shift + alt + A Comenta html
 -- Ctrl + Shift + p --> Preferences --> >Open Settings (JSON)
 
